@@ -23,6 +23,12 @@ public class DB_Connection {
         ResultSet rs = stmnt.executeQuery("SELECT * FROM JOBS");
         
         rs.next();
+        System.out.println(rs.getString("JOB_ID")) ; 
+        
+        // clean up 
+        rs.close();
+        stmnt.close();
+        conn.close();
         
 
     }
